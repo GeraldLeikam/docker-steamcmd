@@ -7,3 +7,4 @@ libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0 libsdl2-ttf-2.0-0
 COPY ./apps/steamcmd/ /tmp/steamcmd
 RUN cp -r /tmp/steamcmd/* / && rm -r /tmp/steamcmd
 RUN /usr/games/steamcmd +exit
+RUN echo "Image crated -> $(date +%s)" > /root/creation_times/"creation_drezael_steamcmd:ubuntu_20.04"
